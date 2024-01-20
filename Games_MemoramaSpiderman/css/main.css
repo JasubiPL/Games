@@ -1,0 +1,495 @@
+@font-face {
+  font-family: spiderman;
+  src: url(../assets/spiderman.ttf);
+}
+body {
+  background-color: #000;
+}
+
+#pantalla_de_juego{
+  display: none;
+  background-image: url(../img/Fondo2.jpg);
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contenedor_tarjetas{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.tarjeta {
+  height: 5%;
+  background: #1C4C96;
+  border-radius: 10px;
+  border: solid 5px #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tracera, .frontal {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: block;
+}
+.tracera img, .frontal img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.panel_derecho{
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+}
+.botonera_panel_derecho{
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: red; */
+} 
+
+/* #btn_salir, #reproducir_musica, #pausar_musica{
+  background-color: #1C4C96;
+} */
+
+#btn_salir, #reproducir_musica, #pausar_musica{
+  cursor: pointer;
+  transition: .3s linear;
+}
+#btn_salir, #reproducir_musica, #pausar_musica{
+  width: 75px;
+}
+
+#btn_salir:hover, #reproducir_musica:hover, #pausar_musica:hover{
+  transform: scale(1.1);
+}
+#pausar_musica{
+  display: none;
+}
+.frontal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.frontal span {
+  font-size: 60px;
+  font-weight: bolder;
+  color: white;
+}
+
+.panel_izquierdo {
+  padding: 20px;
+  height: 100%;
+  /* background-color: #1C4C96; */
+  color: #fff;
+  align-items: center;
+  font-family: spiderman;
+  -webkit-text-stroke: 1px #000;
+  font-size: 30px;
+}
+
+.contador span{
+  font-size: 55px;
+}
+
+#pantalla_de_inicio{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/background.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s linear;
+  display: none;
+  overflow: hidden;
+}
+
+#menu{
+  padding: 40px 0px 100px 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu h1{
+  font-family: spiderman;
+  color: #fff;
+  font-size: 80px;
+  -webkit-text-stroke: 2px #000;
+}
+
+#btn_play{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: red;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  font-family: spiderman;
+  color: #fff;
+  font-size: 40px;
+  transition: linear .5s ;
+}
+
+#btn_play span{
+  margin-top: 15px;
+}
+
+#btn_play:hover, .btn:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  
+}
+
+#pantalla_de_pausa{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, .7) ;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s linear;
+  opacity: 0;
+  display: none;
+}
+
+.pausa{
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: spiderman;
+}
+.pausa h1{
+  font-size: 50px;
+}
+
+.btn-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn{
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  transition: .5s linear;
+  margin-right: 10px;
+}
+
+
+#pantalla_intro{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: .5s linear;
+  display: none;
+
+}
+#pantalla_intro video{
+  width: 100%;
+}
+
+#pantalla_start_app{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/Fondo3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* display: none; */
+}
+
+.start_app_info{
+  max-width: 60%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.start_app_info p{
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+}
+.start_app_info img{
+  width: 150px;
+  animation: phoneRotate 3s infinite;
+}
+.start_app_info button{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-family: spiderman;
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+@keyframes phoneRotate{
+  0%{
+    transform: rotatez(0deg);
+  }
+  80%{
+    transform: rotatez(89deg);
+  }
+  100%{
+    transform: rotatez(89deg);
+  }
+}
+
+#pantalla_fin_del_juego{
+  background-color: rgba(0, 0, 0, .7);
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.fin_del_juego{
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fin_del_juego h1{
+  font-family: spiderman;
+  text-align: center;
+  color: #fff;
+  font-size: 60px;
+  -webkit-text-stroke: 2px #000;
+}
+.estrellas{
+  width: 300px;
+}
+
+.fin_del_juego button{
+  padding-top: 10px ;
+  background-color: red;
+  border-radius: 10px;
+  border: 5px solid #fff;
+  font-family: spiderman;
+  color: #fff;
+  font-size: 35px;
+  -webkit-text-stroke: 2px #000;
+}
+
+
+
+
+
+
+
+/*------------RESPONSIV-------------------*/
+@media screen and (max-width:1024px){
+  .contador{
+  font-size: 30px;
+  }
+
+  .contador span{
+    font-size: 45px;
+  }
+  .frontal span {
+    font-size: 40px;
+  }
+
+  #btn_salir, #reproducir_musica, #pausar_musica{
+    width: 60px;
+  }
+
+}
+
+@media screen and (max-width:900px) {
+  #btn_salir, #reproducir_musica, #pausar_musica{
+    width: 35px;
+  }
+  .panel_derecho, .panel_izquierdo{
+    padding: 15px;
+  }
+  .contador{
+    font-size: 20px;
+    -webkit-text-stroke: .5px #000;
+  }
+  .contador span{
+    font-size: 35px;
+  }
+  
+  .fin_del_juego h1{
+    font-size: 30px;
+    -webkit-text-stroke: 1px #000;
+  }
+  .estrellas{
+    width: 200px;
+  }
+  .fin_del_juego button{
+    padding-top: 10px ;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    font-size: 22.5px;
+    -webkit-text-stroke: 1px #000;
+  }
+  #btn_salir img{
+    width: 50px;
+  }
+  .header{
+    margin: 0px 10px;
+  }
+  .header {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    font-family: spiderman;
+    -webkit-text-stroke: 1px #000;
+  }
+  .tarjeta{
+    width: 80%;
+  }
+  .start_app_info p{
+    font-size: 15px;
+  }
+  .start_app_info img{
+    width: 70px;
+    animation: phoneRotate 3s infinite;
+  }
+  .start_app_info button{
+
+    font-size: 20px;
+  }
+  
+}
+@media screen and (max-width:700px){
+  .panel_derecho, .panel_izquierdo{
+    padding: 15px;
+  }
+  .contador{
+    font-size: 12px;
+    -webkit-text-stroke: .5px #000;
+  }
+  .contador span{
+    font-size: 20px;
+  }
+  .tarjeta{
+    width: 100%;
+  }
+  .frontal span {
+    font-size: 40px;
+  }
+  #menu{
+    padding: 20px 0px;
+  }
+  #menu h1{
+    font-size: 60px;
+  }
+  #btn_play{
+    font-size: 30px;
+  }
+  #btn_play img{
+    width: 50px;
+  }
+  .tarjeta{
+    border:3px solid #fff;
+  }
+
+
+}
+@media screen and (max-height:415px){
+  .tarjeta{
+    width: 100%;
+  }
+  #btn_salir img{
+    width: 40px;
+  }
+  .fin_del_juego h1{
+    font-size: 20px;
+    -webkit-text-stroke: 1px #000;
+  }
+  .estrellas{
+    width: 120px;
+  }
+  .fin_del_juego button{
+    padding-top: 10px ;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    font-size: 17px;
+    -webkit-text-stroke: 1px #000;
+  }
+}
+
+@media screen and (max-height:360px){
+  .tarjeta{
+    width: 80%;
+  }
+  #menu{
+    padding: 20px 0px;
+  }
+  #menu h1{
+    font-size: 60px;
+  }
+  #btn_play{
+    font-size: 30px;
+  }
+  #btn_play img{
+    width: 50px;
+  }
+}
+@media screen and (max-height:281px){
+  .tarjeta{
+    width: 70%;
+  }
+  .logo, .contador{
+    font-size: 20px;
+    }
+    small{
+      font-size: 30px;
+    }
+    .frontal span {
+      font-size: 30px;
+    }
+    .fin_del_juego h1{
+      font-size: 20px;
+      -webkit-text-stroke: 1px #000;
+    }
+    .estrellas{
+      width: 120px;
+    }
+    .fin_del_juego button{
+      padding-top: 10px ;
+      border-radius: 5px;
+      border: 3px solid #fff;
+      font-size: 17px;
+      -webkit-text-stroke: 1px #000;
+    }
+}

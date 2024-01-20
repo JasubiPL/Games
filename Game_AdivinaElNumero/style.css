@@ -1,0 +1,76 @@
+:root{
+  --color-azul: #42E0FD;
+  --color-azulOpacity: rgb(66, 224, 253, .2);
+  --color-azulFuerte: #000020;
+  --color-verde: #01FE44;
+  --color-verdeOpacity: rgb(1, 254, 68, .2);
+  --color-verdeOpaco: #0CA789;
+  --color-verdeOpacoOpacity: rgb(12, 167, 137, .2);
+  --color-naranja: #F24726;
+  --color-naranjaOpacity: rgb(242, 71, 38, .2);
+  --color-rojo: #ff0000;
+  --color-rojoOpacity: rgb(255, 0, 0, .2);
+  --color-amarillo: #ffe600;
+  --color-amarilloOpacity: rgb(255, 230, 0, .2);
+}
+
+@font-face {
+  font-family: spoof;
+  src: url("./src/assets/SpoofTrial-Light.otf");
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  background-image: url("./src/img/background.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.responsive-modal{
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(25px);
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  display: grid;
+  place-content: center;
+}
+
+.responsive-modal section span{
+  font-size: 50px;
+}
+
+.responsive-modal section{
+  background-color: var(--color-rojo);
+  width: 600px;
+  height: 300px;
+  padding: 30px;
+  border-radius: 25px;
+  border: 10px solid #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  color: #fff;
+  font-family: spoof;
+  font-size: 24px;
+}
+
+@media screen and (max-width:820px) {
+  body{
+    overflow: scroll;
+  }
+  .responsive-modal{
+    display: none;
+  }
+  
+}
+

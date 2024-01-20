@@ -1,0 +1,43 @@
+#pantallaDeIntro{
+    background-color: #101010;
+    /* display: none; */
+}
+.contenedorPantallaDeIntro{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoPantallaDeIntroCenter{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.imagotipo{
+    width: 100%;
+    filter: drop-shadow(0 0 2em #42E0FD);
+}
+
+.spinner{
+    width: 70px;
+    animation: rotacionSpiner  1s linear infinite;
+    
+}
+
+@keyframes rotacionSpiner{
+    from
+    {
+        transform: rotateZ(0deg);
+    }
+    to
+    {
+        transform: rotateZ(360deg);
+    }
+}
+

@@ -1,0 +1,70 @@
+#pantallaDeAyuda{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalPantallaDeAyuda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    padding: 20px 10px;
+    background-color: var(--color-azulFuerte);
+    border: 5px solid var(--color-azul);
+    border-radius: 40px;
+    color: #fff;
+    font-family: spoof;
+    text-align: center;
+    animation: modalAyudaEntrada 1s ;
+    overflow: hidden;
+}
+
+#btnModalPantallaDeInicio{
+    background-color: var(--color-verdeOpaco);
+    color: #fff;
+    font-family: spoof;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+@keyframes modalAyudaEntrada {
+    0%{
+        width: 0%;
+        height: 0%;
+        padding: 0;
+    }
+    50%{
+        width: 80%;
+        height: 0%;
+    }
+
+    100%{
+        height: 500px;
+    }
+}
+
+@keyframes modalAyudaSalida {
+    0%{
+        height: 500px;
+    }
+    50%{
+        width: 80%;
+        height: 0%;
+    }
+
+    100%{
+        width: 0%;
+        height: 0%;
+        padding: 0;
+    }
+}

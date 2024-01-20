@@ -1,0 +1,107 @@
+#pantallaDeNiveles{
+    /* background-color: red; */
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows:1fr 10fr 1fr ;
+    color: #fff;
+    font-family: spoof;
+    display: none;
+}
+
+.headerNiveles{
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 20px;
+}
+
+#btnRegresar{
+    height: 30px;
+}
+
+.titulos{
+    font-size: 24px;
+}
+
+.botonesNiveles{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.botonesNiveles button{
+    width: 90%;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 15px;
+    border: solid 5px;
+    color:#fff;
+    font-family: spoof;
+    font-size: 24px;
+}
+
+.botonesNiveles img{
+    width: 50px;
+}
+
+#btnPrincipiante{
+    background-color: var(--color-azulOpacity);
+    border-color: var(--color-azul);
+}
+
+#btnNormal{
+    background-color: var(--color-verdeOpacity);
+    border-color: var(--color-verde);
+}
+
+#btnAvanzado{
+    background-color: var(--color-amarilloOpacity);
+    border-color: var(--color-amarillo);
+}
+
+#btnExperto{
+    background-color: var(--color-naranjaOpacity);
+    border-color: var(--color-naranja);
+}
+
+#btnLegendario{
+    background-color: var(--color-rojoOpacity);
+    border-color: var(--color-rojo);
+}
+
+.contenedorBtnInfo{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+#btnInfo{
+    width: 90%;
+    padding: 5px 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: none;
+    color:#fff;
+    font-family: spoof;
+    font-size: 24px;
+}
+#btnInfo img{
+    width: 50px;
+}
+
+#btnInfo{
+    background-color: var(--color-verdeOpaco);
+}

@@ -1,0 +1,57 @@
+#mensajeJuegoGanado{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animacionJuegoGanado 1s;
+}
+
+.contenedorMensajeJuegoGanado{
+    position: relative;
+    width: 80%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-image: url("../img/background-juegoGanado.jpg");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 5px solid var(--color-verdeOpaco);
+    padding: 20px;
+}
+.contenedorMensajeJuegoGanado img{
+    width: 80%;
+}
+
+#btnVolverAJugar{
+    background-color: var(--color-verdeOpaco);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-family: spoof;
+    font-size: 18px;
+}
+
+.contenedorMensajeJuegoGanado p{
+    position: absolute;
+    color: #fff;
+    font-weight: bolder;
+    font-family: spoof;
+    font-size: 36px;
+}
+
+@keyframes animacionJuegoGanado {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}

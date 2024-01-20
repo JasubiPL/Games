@@ -1,0 +1,89 @@
+#pantallaDeInicio{
+    display: none;
+    
+}
+.contenedorPantallaDeInicio{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoJuego{
+    width: 100%;
+}
+
+.contenedorPantallaDeInicio::after{
+    position: absolute;
+    top: 20vh;
+    left: 60vw;
+    content: "Beta 1.0.0";
+    color: #fff;
+    background-color: var(--color-rojo);
+    border: 3px solid var(--color-rojo);
+    box-shadow: 1px 1px 5px 2px #000;
+    border-radius: 30px;
+    padding: 10px;
+    font-family: spoof;
+    font-size: 20px;
+    transform: rotateZ(-15deg);
+}
+
+.contenedorBtnPantallaDeInicio{
+    /* background-color: aqua; */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contenedorBtnPantallaDeInicio button{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 15px;
+    font-family: spoof;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.contenedorBtnPantallaDeInicio button img{
+    width: 50px;
+    margin-right: 20px;
+}
+
+#btnJugar{
+    color: #fff;
+    background-color: var(--color-verdeOpacity);
+    border: 3px solid var(--color-verde);
+
+
+}
+
+#btnMasApps{
+    color: #fff;
+    background-color: var(--color-azulOpacity);
+    border: 3px solid var(--color-azul);
+}
+
+.follow{
+    color: #fff;
+    text-align: center;
+    font-family: spoof;
+}
+
+.contenedorFollowIcon{
+    margin-top: 15px;
+}
+.contenedorFollowIcon img{
+    width: 50px;
+}
+.follow p{
+    margin-top: 5px;
+}
+
